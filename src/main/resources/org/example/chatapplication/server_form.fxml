@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="503.0" prefWidth="453.0" style="-fx-background-color: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), linear-gradient(to bottom right, #33917a, #405aa8);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapplication.ServerFormController">
+    <children>
+        <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="463.0" prefWidth="413.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 15px;">
+            <effect>
+                <BoxBlur width="10" height="10" iterations="3" />
+            </effect>
+        </AnchorPane>
+
+        <Label layoutX="161.0" layoutY="39.0" text="Server Form" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <JFXTextArea fx:id="txtAreaMsgDisplay" focusColor="#405aa800" layoutX="41.0" layoutY="89.0" prefHeight="257.0" prefWidth="371.0" style="-fx-background-color: rgba(255, 255, 255, 0.3); -fx-text-fill: #FFFFFF; -fx-border-radius: 10px; -fx-border-color: rgba(255,255,255,0.2);" unFocusColor="#4d4d4d00" />
+
+        <Label layoutX="41.0" layoutY="416.0" text="Enter your message:" textFill="WHITE" />
+
+        <JFXButton fx:id="btnSend" buttonType="RAISED" layoutX="325.0" layoutY="441.0" onAction="#sendBtnOnAction" prefHeight="40.0" prefWidth="87.0" style="-fx-background-color: #33917a; -fx-background-radius: 12px;" text="Send" textFill="WHITE">
+            <ripplerFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.1764705926179886" green="0.8823529481887817" blue="0.11372549086809158" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.250980406999588" green="0.658823549747467" blue="0.501960813999176" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </ripplerFill>
+        </JFXButton>
+
+        <JFXButton fx:id="btnEmoji" buttonType="RAISED" layoutX="274.0" layoutY="441.0" onAction="#emojiBtnOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #405aa8; -fx-background-radius: 12px;" text="😀" textFill="WHITE" />
+
+        <TextField fx:id="txtMsg" layoutX="41.0" layoutY="441.0" prefHeight="40.0" prefWidth="224.0" style="-fx-background-radius: 10px; -fx-background-color: rgba(255, 255, 255, 0.3); -fx-text-fill: white; -fx-border-color: rgba(255,255,255,0.2); -fx-border-radius: 10px;" />
+    </children>
+</AnchorPane>
